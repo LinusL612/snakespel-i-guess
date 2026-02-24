@@ -1,2 +1,0 @@
-# snakespel-i-guess
-yes
