@@ -1,0 +1,10 @@
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\bin\Debug\upgift till max.exe.config
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\bin\Debug\upgift till max.exe
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\bin\Debug\upgift till max.pdb
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\obj\Debug\upgift till max.csproj.AssemblyReference.cache
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\obj\Debug\upgift_till_max.Form1.resources
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\obj\Debug\upgift_till_max.Properties.Resources.resources
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\obj\Debug\upgift till max.csproj.GenerateResource.cache
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\obj\Debug\upgift till max.csproj.CoreCompileInputs.cache
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\obj\Debug\upgift till max.exe
+C:\Users\l2lundh\source\repos\upgift till max\upgift till max\obj\Debug\upgift till max.pdb
