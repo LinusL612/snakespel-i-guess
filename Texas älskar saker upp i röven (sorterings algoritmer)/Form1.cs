@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,20 +10,20 @@ namespace Texas_älskar_saker_upp_i_röven__sorterings_algoritmer_
 {
     public partial class Form1 : Form
     {
-        static int ArraySize = 20;
-        Random BBC = new Random();
-        int[] NummerArray = new int[ArraySize];
-        List<int> Numberos = new List<int>();
-        int RndInt;
+        static int ArraySize = 20; // Ändra här för att ändra storleken på arrayen (och därmed antalet element som sorteras)
+        Random BBC = new Random(); // Random generator för att skapa slumpmässiga tal
+        int[] NummerArray = new int[ArraySize]; // Array som ska sorteras
+        List<int> Numberos = new List<int>();// Lista som används för att skapa unika slumpmässiga tal innan de kopieras till arrayen
+        int RndInt; // Variabel för att hålla det slumpmässiga talet som genereras
 
-        int sortedIndex = -1;
+        int sortedIndex = -1; // Håller reda på det index som är sorterat i vissa algoritmer (för visuell feedback)
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        public async Task Listmaker()
+        public async Task Listmaker() // skapar randomised listan som ska sorteras
         {
             ItemBox.Items.Clear();
             Numberos.Clear();
@@ -38,7 +38,7 @@ namespace Texas_älskar_saker_upp_i_röven__sorterings_algoritmer_
             await Listfiller();
         }
 
-        async Task Listfiller(int i1 = -1, int i2 = -1)
+        async Task Listfiller(int i1 = -1, int i2 = -1) // fyller listboxen efter den sorterats
         {
             ItemBox.Items.Clear();
 
@@ -53,7 +53,7 @@ namespace Texas_älskar_saker_upp_i_röven__sorterings_algoritmer_
         {
         }
 
-        // 🔵 Bubble Sort
+        // Bubble Sort 
         private async void SortBtn_Click(object sender, EventArgs e)
         {
             await Listmaker();
@@ -85,7 +85,7 @@ namespace Texas_älskar_saker_upp_i_röven__sorterings_algoritmer_
             }
         }
 
-        // 🟢 Counting Sort (ersätter Selection Sort)
+        //Counting Sort
         private async void CountingSortBtn_Click(object sender, EventArgs e)
         {
             await Listmaker();
@@ -99,7 +99,7 @@ namespace Texas_älskar_saker_upp_i_röven__sorterings_algoritmer_
 
             int[] count = new int[range];
 
-            // 🔹 Räkna
+            //  Räkna antalet av varje element
             for (int i = 0; i < NummerArray.Length; i++)
             {
                 count[NummerArray[i] - min]++;
@@ -108,7 +108,7 @@ namespace Texas_älskar_saker_upp_i_röven__sorterings_algoritmer_
                 await Task.Delay(50);
             }
 
-            // 🔹 Skriv tillbaka
+            // Skriv tillbaka de sorterade elementen i NummerArray
             int index = 0;
 
             for (int i = 0; i < count.Length; i++)
@@ -126,7 +126,7 @@ namespace Texas_älskar_saker_upp_i_röven__sorterings_algoritmer_
             }
         }
 
-        // 🔴 Quick Sort (async)
+        // Quick Sort funktion
         private async Task QuickSortAsync(int left, int right)
         {
             if (left >= right)
@@ -164,7 +164,7 @@ namespace Texas_älskar_saker_upp_i_röven__sorterings_algoritmer_
             await QuickSortAsync(i + 1, right);
         }
 
-        // 🔘 QuickSort knapp
+        // QuickSort knapp för funktionen
         private async void SortingButton_Click(object sender, EventArgs e)
         {
             await Listmaker();
@@ -174,7 +174,7 @@ namespace Texas_älskar_saker_upp_i_röven__sorterings_algoritmer_
 
             await QuickSortAsync(0, NummerArray.Length - 1);
 
-            // Visa slutet snyggt
+            // Visar slutet snyggt
             for (int i = 0; i < NummerArray.Length; i++)
             {
                 sortedIndex = i;
